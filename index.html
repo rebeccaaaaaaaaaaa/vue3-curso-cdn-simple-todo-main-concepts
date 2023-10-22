@@ -22,14 +22,18 @@
           <div
             class="single-todo"
             v-for="task in tasks"
-            @click="task.done = !task.done"
+            @click="task.done = !task.done; storeTasks();"
             :class="task.done ? 'done' : ''"
           >
             <p>{{ task.description }}</p>
           </div>
         </div>
 
-        <button v-if="tasks.length" class="clear" @click="tasks=[]">
+        <button
+          v-if="tasks.length"
+          class="clear"
+          @click="tasks=[]; storeTasks(); "
+        >
           Limpar tudo
         </button>
 
@@ -38,7 +42,7 @@
           placeholder="Escreva uma nova tarefa..."
           v-model="newTask.description"
         />
-        <button class="add" @click="addTask()">Adicionar</button>
+        <button class="add" @click="addTask(); storeTasks()">Adicionar</button>
 
         <div class="instructions">
           Instruções:
@@ -48,6 +52,12 @@
             </li>
             <li>Use o botão limpar tudo para remover todas as tarefas</li>
             <li>Use o input para adicionar novas tarefas</li>
+          </ul>
+        </div>
+        <div class="instructions">
+          Plus:
+          <ul>
+            <li>Salvar no local storage</li>
           </ul>
         </div>
       </section>

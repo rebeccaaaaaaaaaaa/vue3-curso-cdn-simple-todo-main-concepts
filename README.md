@@ -8,6 +8,7 @@
 
 # Conceitos utilizados
 
+- Lifecycle Hooks
 - Declarative Rendering (Rendererização declarativa) 
 - Diretivas e Loop For 
 - Manipulação de Eventos com a Diretiva v-on 
