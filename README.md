@@ -16,4 +16,4 @@
 
 # Visual
 
-<img src="" alt="Layout da aplicação"/>
+<img src="https://raw.githubusercontent.com/rebeccaaaaaaaaaaa/vue3-curso-cdn-simple-todo-main-concepts/main/preview.png" alt="Layout da aplicação"/>
